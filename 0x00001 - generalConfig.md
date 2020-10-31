@@ -1,15 +1,17 @@
 Configurações gerais do LittleRanger. As configurações de user devem ser feitas antes de configurar outros serviços do server.
 
-* Criação de user e permissões (trocar permissões)
+## Criação de user e permissões (trocar permissões)
 
+```
 # useradd karona -m
 # passwd karona
 # vim /etc/sudoers
 karona ALL=(ALL) ALL
+```
 
+## Definindo IP
 
-* Definindo IP
-
+```
 # vim /etc/network/interfaces
 
 auto eth0
@@ -21,8 +23,9 @@ gateway 192.168.X.X
 # /etc/init.d/networking restart
 
 
-* Definindo hostname
+## Definindo hostname
 
 # vim /etc/hostname
 
 LittleRanger
+```

@@ -1,4 +1,4 @@
-* Tools utilizadas no Little Ranger.
+# Tools utilizadas no Little Ranger.
 
 vim
 neofetch

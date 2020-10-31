@@ -1,4 +1,4 @@
-* Servidor SSH(Secure Shell) and RSA.
+# Servidor SSH(Secure Shell) and RSA.
 
  Utilizado para acessar o LittleRanger pelo RainhaAna remotamente e apenas por ele o acesso via SSH.
 
@@ -12,7 +12,7 @@
  -ssh-agent - Agent de autenticação, armazena a private key para autenticação via public key
 
 
-* Arquivos de configuração:
+## Arquivos de configuração:
 
  -/etc/ssh/sshd_config - Arquivo de configuração do server SSH
  -/ect/ssh/ssh_config - Arquivo de configuração do client SSH
@@ -20,8 +20,9 @@
 
 
 
-* Client - Gerando key copiando para o server
+## Client - Gerando key copiando para o server
 
+```
 # ssh-keygen -t rsa -b 4096
 
 Generating public/private rsa key pair.
@@ -37,10 +38,11 @@ The key's randonart image is:
 ...
 
 # ssh-copy-id karona@192.168.X.X
+```
 
+## Server - Instalação e configuração do Server SSH
 
-* Server - Instalação e configuração do Server SSH
-
+```
 # apt install -y openssh-server
 # cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bkp
 # vim /etc/ssh/sshd_config
@@ -54,12 +56,13 @@ Banner /home/karona/banner
 # systemctl restart sshd
 ou
 # /etc/init.d/ssh restart
+```
 
+## Client - Login SSH
 
-* Client - Login SSH
-
+```
 $ ssh -p 2220 192.168.X.X
-
+```
 
 References:
 https://www.openssh.com/manual.html
